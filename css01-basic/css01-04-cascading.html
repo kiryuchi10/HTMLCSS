@@ -4,9 +4,22 @@
 <head>
     <title>What does Cascading means?</title>
 </head>
+<!--!important>inline>internal>external ... >Browser
+    2.나중에 정의된 스타일 규칙이 먼저 정-->
 
+<!-- 외부 CSS-->
+<link rel="stylesheet"
+    type="text/css"
+    href="/ex01-renewal/css/external.css"/>
+    <style>
+        h1{
+            color : white;
+
+        }
+    </style>
 <body>
-    <h1>Hello, External CSS!</h1>
+    <!--inline style-->
+    <h1 style="color : lightgreen">Hello, External CSS!</h1>
     <p>This paragraph is styled with external CSS.</p>
 </body>
 
