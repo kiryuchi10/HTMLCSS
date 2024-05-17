@@ -3,6 +3,20 @@
 
 <head>
     <title>CSS 자식 선택자와 후손 선택자 실습</title>
+    <style>
+        div{
+            border: 1px dotted red;
+            margin: 3px;
+        }
+        /*자식 선택자: 직계 후손*/
+        .parent> p{
+            color : red; 
+
+        }
+        .parent p{
+            font-size: 20px;
+        }
+    </style>
 </head>
 
 <body>
