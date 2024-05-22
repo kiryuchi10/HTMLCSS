@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>리스트를 이용한 메뉴 만들기</title>
+<style type="text/css">
+   /* 1. Remove default margin and padding */
+body, div, ul, li {
+  margin: 0;
+  padding: 0;
+}
+div{
+    border: 1px solid black;
+}
+
+/* 2. Apply font and text properties to all elements */
+body {
+  font-family: "맑은 고딕", "돋움", sans-serif;
+  font-size: 0.75em; /* 12px */
+  color: #333;
+}
+
+/* 3. Add class "tab-box" to the div surrounding the list */
+.tab-box {
+  /* 4. Center the tab-box horizontally and add top margin */
+  margin: 20px auto 0;
+  border: 20px black;
+  /* 5. Set the width of the tab-box */
+  width: 520px;
+}
+
+/* Additional styling for the tab buttons and content */
+.tab-button {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  float: left;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.tab-button:hover {
+  background-color: #ddd;
+}
+
+.tab-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.tab-content:first-child {
+  display: block;
+}
+/* 1. Create a tab with rounded corners */
+.tab-button {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  float: left;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* 2. Set the height of the tab list */
+.tab-box ul {
+  height: 27px; /* 22px (tab item height) + 2px (border) + 3px (internal padding) */
+}
+
+/* 3. Add tab view below the tab list */
+/* Adjust the position of the tab view to align with the tabs */
+.tab-view {
+  clear: both; /* Clear the floats */
+  padding: 20px; /* Add padding to the tab view */
+  margin-top: -1px; /* Adjust the position to align with the tabs */
+  text-align: center; /* Center-align content */
+  line-height: 200px; /* Set line height to 200px */
+  width : 516px;
+  border: 1px solid black
+}
+.tab-box.active {
+  background-color: orange;
+}
+
+ul {
+  height: 27px;
+}
+
+</style>
+<script src="" type="text/javascript"></script>
+</head>
+<body>
+<div class="tab-box">
+	<!-- <ul>
+        <li>메뉴 1</li>
+        <li>메뉴 2</li>
+        <li>메뉴 3</li>
+        <li class="selected">메뉴 4</li>
+        <li>메뉴 5</li>
+    </ul> -->
+    
+    <div>
+    	<div class="tab-container">
+            <button class="tab-button" onclick="openTab(event, 'menu1')">메뉴 1</button>
+            <button class="tab-button" onclick="openTab(event, 'menu2')">메뉴 2</button>
+            <button class="tab-button" onclick="openTab(event, 'menu3')">메뉴 3</button>
+            <button class="tab-button" onclick="openTab(event, 'menu4')">메뉴 4</button>
+            <button class="tab-button" onclick="openTab(event, 'menu5')">메뉴 5</button>
+          
+            <div id="menu1" class="tab-content">
+              Menu 1 Content
+          </div>
+    </div>
+</div>    
+</body>
+
+</html>

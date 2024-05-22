@@ -4,12 +4,78 @@
 <head>
     <title>CSS Box Model 실습</title>
 </head>
+    <style>
+        /*기본 마진과 패딩 초기화*/
+        /**/
+        *{
+            margin :0;
+            padding: 0;
+        }
+        .padding-box{
+            display :flex;
+            width :200px;
+            height:200px;
+            background-color : pink ;
+            justify-content: center;
+            align-items :center; 
+        }
 
+        .margin-box{
+            display :flex;
+            width :200px;
+            height:200px;
+            background-color : lightgreen ;
+            justify-content: center;
+            align-items :center; 
+        
+            border : 1ps solid black 
+        }
+
+        .bottom-box{
+            display :flex;
+            width :200px;
+            height:200px;
+            background-color : blue ;
+            justify-content: center;
+            align-items :center; 
+            
+        }
+        .padding-box{
+            /*
+            값이 1개 : 네방향 모두 같은 값
+            
+            
+            */
+            padding: 10px 20px;
+
+        }
+        .margin-box{
+            /*
+            값이 1개 : 네방향 모두 같은 값
+            
+            
+            */
+            border: 2px green;
+            margin :10px;
+
+            /*
+            방향 접미사를 활용 개별 간격 적용
+            */
+            margin-top:10px;
+            margin-right :20px;
+            margin-bottom:30px;
+            margin-left :40px;
+            /*값이 4개 : top right bottom left (시계)*/
+            /*margin: 10px 20px 30px 40px;*/
+            margin : 10px,20px;
+        }
+    </style>
 <body>
     <h1>CSS Box Model 실습</h1>
     <div class="padding-box">Padding Box</div>
     <div class="margin-box">Margin Box</div>
     <div class="bottom-box">Bottom Box</div>
+
 </body>
 
 </html>
