@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../../Downloads/ex01-renewal"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ex01-renewal"
+	}
+}

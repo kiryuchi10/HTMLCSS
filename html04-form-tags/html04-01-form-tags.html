@@ -3,6 +3,56 @@
 
 <head>
     <title>가입 폼 실습</title>
+    <script>
+        window.addEventListener("load",event=>{
+            //registerForm을 찾아서 검증 이벤트 연결 
+            const frm = document.forms["registerForm"];
+
+            frm.addEventListener("submit",event=>{
+                event.preventDefault();
+            })
+                if(frm.username.value.trim()===""){
+                    alert("사용자 이름을 입력해주세요");
+                    frm.username.focus();
+                    return;
+                }
+                //사용자 이메일 검증
+                if(frm.email.value.trim()===""){
+                    alert("이메일이 입력되지 않았습니다");
+                    frm.email.focus();
+                    return;
+                }
+
+                //사용자 이메일 검증
+                if(frm.password.value.trim()===""){
+                    alert("비밀번호를 설정하지 않았습니다");
+                    frm.password.focus();
+                    return;
+                }
+
+                if(frm.password_confirm.value.trim()===""){
+                    alert("비밀번호를 설정하지 않았습니다");
+                    frm.password_confirm.focus();
+                    return;
+                }
+
+                if(frm.password.value !== frm.password_confirm.value){
+                    alert("비밀번호와 확인 비밀번호가 일치하지 않습니다.")
+                    return;
+                }
+                let message = frm.gender.value === 'M'? "남성":"여성";
+                console.log(`${message}를 선택하셨습니다.`);
+
+                let checkedCnt =0;
+                for(let i =0;i<frm.fav.length;i++){
+                    if(frm.fav[i].checked){
+                        checkedCnt++;
+                    }
+                }
+            console.log(frm);
+
+        });
+    </script>
 </head>
 
 <body>
